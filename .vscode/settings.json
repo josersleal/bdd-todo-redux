@@ -1,9 +1,4 @@
 {
   "javascript.format.enable": false,
-  "gitflow4code.features": [
-    {
-      "name": "feature/partII",
-      "base": "develop"
-    }
-  ]
+  "gitflow4code.features": []
 }
