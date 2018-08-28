@@ -1,20 +1,17 @@
-import React from 'React';
-
+import React from 'react';
 import { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-configure({ adapter: new Adapter() });
-import { AddTodo } from '.';
+import AddTodo from './index';
+import App from '../../App';
 
 describe('Given a ToDo component', () => {
   describe('When started', () => {
+    it('renders without crashing', () => {
+      const comp = shallow(<App />);
+      expect(comp.exists()).toEqual(true);
+    });
     it('Then it  renders successfully', () => {
       const comp = shallow(<AddTodo />);
-      expect(comp.exists).toEqual(true);
-    });
-    it('And it has button todo', () => {
-      const comp = shallow(<AddTodo />);
-
-      expect(comp.find('.todo-submit').length).toEqual(1);
+      expect(comp.exists()).toEqual(true);
     });
   });
 });

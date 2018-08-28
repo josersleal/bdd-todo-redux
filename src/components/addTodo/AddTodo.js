@@ -1,13 +1,9 @@
-import React from 'react';
-import cssModule from 'react-css-modules';
-import styles from './AddTodo.css';
+import React, { Component } from 'react';
 
-const AddTodo = () => (
-  <div>
-    <form />
-  </div>
-);
+export class AddTodo extends Component {
+  render() {
+    return <div />;
+  }
+}
 
-AddTodo.propTypes = {};
-
-export default cssModule(AddTodo, styles);
+export default AddTodo;
